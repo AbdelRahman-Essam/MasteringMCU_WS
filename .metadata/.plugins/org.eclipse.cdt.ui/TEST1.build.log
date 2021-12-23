@@ -1,0 +1,23 @@
+10:58:40 **** Incremental Build of configuration Debug for project TEST1 ****
+make -j8 all 
+Building file: ../Core/Src/stm32f4xx_hal_msp.c
+Invoking: MCU GCC Compiler
+F:\Engineering\EngProjects\ARM\STMWorkBench\TEST1\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DSTM32F407xx -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Core/Inc" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/USB_HOST/App" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/USB_HOST/Target" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Drivers/STM32F4xx_HAL_Driver/Inc" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Middlewares/ST/STM32_USB_Host_Library/Core/Inc" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Engineering/EngProjects/ARM/STMWorkBench/TEST1/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" -o "Core/Src/stm32f4xx_hal_msp.o" "../Core/Src/stm32f4xx_hal_msp.c"
+Finished building: ../Core/Src/stm32f4xx_hal_msp.c
+ 
+Building target: TEST1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F407VGTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "TEST1.elf" @"objects.list"   -lm
+Finished building target: TEST1.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "TEST1.elf" "TEST1.hex"
+arm-none-eabi-size "TEST1.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19636	    156	   3660	  23452	   5b9c	TEST1.elf
+ 
+
+10:58:41 Build Finished (took 1s.518ms)
+
